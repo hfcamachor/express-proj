@@ -1,0 +1,44 @@
+{
+  "sCharacters": [
+    {
+      "name": "Homer",
+      "id": 1
+    },
+    {
+      "name": "Bart",
+      "id": 2
+    },
+    {
+      "name": "Lisa",
+      "id": 3
+    },
+    {
+      "name": "MArge",
+      "id": 4
+    },
+    {
+      "name": "Abe",
+      "id": 5
+    },
+    {
+      "name": "Maggie",
+      "id": 6
+    },
+    {
+      "name": "Patty",
+      "id": 7
+    },
+    {
+      "name": "Selma",
+      "id": 8
+    },
+    {
+      "name": "",
+      "id": 9
+    },
+    {
+      "name": "Bob",
+      "id": 10
+    }
+  ]
+}
