@@ -12,14 +12,14 @@ export default function Home() {
   const [newSimpson, setNewSimpson] = useState<string>('');
 
   useEffect(() => {
-    fetch('http://localhost:5000/api/sCharacters').then(response => response.json())
+    fetch('http://localhost:8080/api/sCharacters').then(response => response.json())
       .then(data => { console.log("data", data); setBackendData(data) })
   }, []);
 
   const handleFormSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
-    fetch('http://localhost:5000/api/sCharacters', {
+    fetch('http://localhost:8080/api/sCharacters', {
       method: "POST",
       headers: {
         'Content-Type': 'application/json',
@@ -43,12 +43,10 @@ export default function Home() {
       </div>
       <form onSubmit={handleFormSubmit}>
         <div className="space-y-6 py-8 text-base leading-7 text-gray-600">
-          <input
-            type="text"
-            placeholder="Enter a name"
-            value={newSimpson}
-            onChange={(event) => setNewSimpson(event.target.value)}
-          />
+          <div>
+            <label htmlFor="name">Name: </label>
+            <input type="text" id="name" minLength={4} maxLength={20} placeholder="Enter a name" value={newSimpson} onChange={(event) => setNewSimpson(event.target.value)} />
+          </div>
           <button className="add-button" type="submit">Add User</button>
         </div>
       </form>
